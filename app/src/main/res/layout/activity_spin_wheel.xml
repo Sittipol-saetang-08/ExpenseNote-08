@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030712"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎰 QUANTUM ROULETTE (RED / BLACK) 🎰"
+        android:textColor="#FF007F"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Score & Status Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B132B"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCORE: 0"
+            android:textColor="#00FFCC"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เลือกทายสีก่อนหมุนรูเล็ตควอนตัม"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Roulette Result Box -->
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="160dp"
+        android:background="#111C3A"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="12dp"
+        android:layout_marginBottom="28dp">
+
+        <TextView
+            android:id="@+id/tvRouletteResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[ ? ]"
+            android:textColor="#00FFCC"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvColorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รอลุ้นผล..."
+            android:textColor="#94A3B8"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Guess & Spin Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnRed"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="🔴 ทายสีแดง (RED)"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="#EF4444"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnBlack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="⚫ ทายสีดำ (BLACK)"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1E293B"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBackHub"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="⬅ กลับสู่เมนูอาร์เคด"
+        android:textSize="12sp"
+        android:backgroundTint="#1E293B"
+        android:textColor="#94A3B8" />
+
+</LinearLayout>

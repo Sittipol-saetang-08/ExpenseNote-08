@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030712"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚡ QUANTUM ARCADE HUB ⚡"
+        android:textColor="#FF007F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT NEURAL MINI-GAME"
+        android:textColor="#00FFCC"
+        android:textSize="11sp"
+        android:letterSpacing="0.2"
+        android:layout_marginBottom="36dp" />
+
+    <!-- Game 1: High-Low Cards -->
+    <Button
+        android:id="@+id/btnGameCard"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="🃏 ไพ่ทายสูงต่ำ (High-Low Card)"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#0B132B"
+        android:textColor="#00FFCC"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Game 2: Spin Wheel -->
+    <Button
+        android:id="@+id/btnGameWheel"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="🎡 รูเล็ตควอนตัม (Quantum Roulette)"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#0B132B"
+        android:textColor="#FF007F"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Game 3: Aim Trainer -->
+    <Button
+        android:id="@+id/btnGameAim"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="🎯 ฝึกเล็งเป้า (Neural Aim Trainer)"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:backgroundTint="#0B132B"
+        android:textColor="#00FFCC"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="⬅ กลับสู่ระบบบัญชีควอนตัม"
+        android:textSize="12sp"
+        android:backgroundTint="#1E293B"
+        android:textColor="#94A3B8" />
+
+</LinearLayout>

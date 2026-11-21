@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030712"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎯 NEURAL AIM LAB (AIM TRAINER) 🎯"
+        android:textColor="#FF007F"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Difficulty Selection Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIFFICULTY:"
+            android:textColor="#00FFCC"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#0B132B"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+    </LinearLayout>
+
+    <!-- Stats HUD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B132B"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="SCORE: 0"
+            android:textColor="#00FFCC"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="TIME: 30s"
+            android:textColor="#FF007F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Game Arena (FrameLayout for spawning targets) -->
+    <FrameLayout
+        android:id="@+id/flGameArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0B132B"
+        android:layout_marginBottom="12dp">
+
+        <!-- Start / Instructions Overlay -->
+        <Button
+            android:id="@+id/btnStartAim"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="🎯 เริ่มฝึก AIM (START)"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:backgroundTint="#00FFCC"
+            android:textColor="#030712" />
+    </FrameLayout>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBackHub"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="⬅ กลับสู่เมนูอาร์เคด"
+        android:textSize="12sp"
+        android:backgroundTint="#1E293B"
+        android:textColor="#94A3B8" />
+
+</LinearLayout>

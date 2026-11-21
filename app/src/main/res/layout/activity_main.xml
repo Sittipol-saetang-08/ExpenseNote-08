@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030712"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Top Status Bar: Cybernetic HUD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:background="#0B132B"
+            android:padding="12dp">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="#00FFCC"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="NEURAL_NET // PROTOCOL 3024"
+                android:textColor="#00FFCC"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.25" />
+
+            <!-- Secret Mini-Game Button (Top Right) -->
+            <TextView
+                android:id="@+id/btnSecretGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[SECRET]"
+                android:textColor="#FF007F"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- Main Cyberpunk Terminal Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0B132B"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:elevation="12dp">
+
+            <!-- Title Header -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡ QUANTUM EXPENSE CORE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI-POWERED NEURAL LEDGER"
+                android:textSize="10sp"
+                android:textColor="#00FFCC"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Amount Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INPUT CREDITS"
+                    android:textColor="#94A3B8"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.15" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="#1E293B"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#111C3A"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:inputType="numberDecimal"
+                android:hint="0.00"
+                android:textColor="#00FFCC"
+                android:textColorHint="#475569"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Description Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEURAL MEMO (TH/EN)"
+                    android:textColor="#94A3B8"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.15" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="#1E293B"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:background="#111C3A"
+                android:padding="16dp"
+                android:inputType="textMultiLine"
+                android:hint="ระบุรายละเอียด เช่น อัปเกรดไซเบอร์แวร์, คาเฟ่"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#475569"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Category Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📂 SELECT CATEGORY // เลือกหมวดหมู่"
+                    android:textColor="#00FFCC"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="#1E293B"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="#162247"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Hyper-Neon Save Button -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="⚡ SYNC TRANSACTION TO MATRIX"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:backgroundTint="#00FFCC"
+                android:textColor="#030712"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Cyberpunk Clear Button -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🗑 PURGE MATRIX"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:backgroundTint="#FF007F"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Total & Last Item Summary Box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#111C3A"
+                android:padding="14dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL CREDITS // รวมยอดทั้งหมด"
+                        android:textColor="#94A3B8"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+
+                    <TextView
+                        android:id="@+id/tvTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ยอดรวมวันนี้: 0.00 บาท"
+                        android:textColor="#00FFCC"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLastItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="รายการล่าสุด: - "
+                    android:textColor="#E2E8F0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- History Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="#FF007F"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUANTUM HISTORY LOG"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.1" />
+            </LinearLayout>
+
+            <!-- History Terminal Box -->
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#030712"
+                android:padding="16dp"
+                android:text="[ WAITING FOR NEURAL INPUT... ]"
+                android:textColor="#00FFCC"
+                android:fontFamily="monospace"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

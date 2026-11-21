@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030712"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="♠️ HIGH-LOW QUANTUM ARCADE ♣️"
+        android:textColor="#FF007F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Score & Stats Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B132B"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCORE: 0"
+            android:textColor="#00FFCC"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ไพ่ใบถัดไปจะ [สูงกว่า] หรือ [ต่ำกว่า] ใบนี้?"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Reference Card (Current Open Card) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:background="#111C3A"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ไพ่ตั้งต้น (CURRENT)"
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvCurrentCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textColor="#00FFCC"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCurrentSuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="♠ SPADES"
+                android:textColor="#FF007F"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Hidden Mystery Card -->
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:background="#162247"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ไพ่ปริศนา (MYSTERY)"
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvMysteryCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#63;"
+                android:textColor="#FF007F"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMysterySuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ FACE DOWN ]"
+                android:textColor="#94A3B8"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Guess Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnHigher"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="52dp"
+            android:text="🔼 สูงกว่า (HIGH)"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="#00FFCC"
+            android:textColor="#030712"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnLower"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="52dp"
+            android:text="🔽 ต่ำกว่า (LOW)"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FF007F"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- Next Round Button (Hidden until guess) -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🔄 สุ่มไพ่รอบถัดไป (NEXT ROUND)"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:backgroundTint="#3B82F6"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="⬅ กลับสู่ระบบบัญชีควอนตัม"
+        android:textSize="12sp"
+        android:backgroundTint="#1E293B"
+        android:textColor="#94A3B8" />
+
+</LinearLayout>
